@@ -1,0 +1,270 @@
+<!-- Starting from D6's exercise, use your Smartphone Shop Website and implement the following exercises-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Phone Shop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .red-color {
+            color: red;
+
+            padding: 10px;
+            width: 250px;
+
+        }
+    </style>
+</head>
+
+<body onclick="changeBackground()">
+    <h1 class="text-center" onclick="changeHeading()" onmousemove="addClassToTitle()">Phone Shop</h1>
+    <div class="container" onmouseover="removeClassFromTitle()">
+        <div class="row">
+            <div class="col-sm">
+                <img src="./iPhone.png" class="img-fluid img " alt="" width="162" height="162">
+                <h4 class="mb-4">iPhone 12 Pro </h4>
+                <ul>
+                    <li>6.1" Super Retina XDR display</li>
+                    <li>5G services</li>
+                    <li>A14 Bionic chip</li>
+                    <li>Ceramic Shield</li>
+                    <li>Surgical-grade stainless steel</li>
+                    <li>Industry-leading IP68 water resistance</li>
+                    <li>Night mode</li>
+                </ul>
+                <a
+                    href="https://www.amazon.co.uk/New-Apple-iPhone-12-128GB/dp/B08L5QVFCT/ref=sr_1_3?dchild=1&keywords=iphone+12+pro&qid=1609543030&quartzVehicle=93-1814&replacementKeywords=iphone+pro&sr=8-3">£849.00</a>
+            </div>
+            <div class="col-sm">
+                <img src="./s20.jpg" class="img-fluid img" alt="" width="162" height="162">
+                <h4>Samsung Galaxy S20</h4>
+                <ul>
+                    <li>Space Zoom</li>
+                    <li>Night Mode</li>
+                    <li>Future-Ready 5G</li>
+                    <li>8K Video snap</li>
+                    <li>Single Take</li>
+                    <li>Edge-to-Edge Clarity</li>
+                    <li>All Day Battery with Super Fast Charging</li>
+                    <li>Laptop Storage</li>
+                </ul>
+                <a
+                    href="https://www.amazon.co.uk/Samsung-Galaxy-Mobile-Phone-Smartphone-Cosmic-Grey/dp/B084GQF2RC/ref=sr_1_1?dchild=1&keywords=samsung+s20&qid=1609541370&sr=8-1">£850.00</a>
+            </div>
+            <div class="col-sm">
+                <img src="./huawei.png" class="img-fluid img px-3 pt-3" alt="" width="162" height="162">
+                <h4>HUAWEI P40 Pro</h4>
+                <ul>
+                    <li>6.58" FHD+ OLED touchscreen</li>
+                    <li>Kirin 990 5G SOC with high efficiency</li>
+                    <li>x5 optical zoom, x50 digital zoom</li>
+                    <li>HUAWEI Golden Snap AI Remove Passersby</li>
+                    <li>Super night mode photography</li>
+                    <li>Under screen fingerprint</li>
+                </ul>
+                <a
+                    href="https://www.amazon.co.uk/Huawei-P40-Pro-Smartphone-Silver/dp/B085JJQT49/ref=sr_1_3?crid=EVQ7QJRXCFL&dchild=1&keywords=huawei+p40+pro&qid=1609541053&sprefix=huawei+p40%2Caps%2C202&sr=8-3">£983.48</a>
+            </div>
+            <div class="col-sm">
+                <img src="./oppo.png" class="img-fluid img" alt="">
+                <h4>APPO Find X2 Pro</h4>
+                <ul>
+                    <li>120Hz WQHD+ Ultra Vision Screen</li>
+                    <li>Ultra Vision Camera System</li>
+                    <li>65W SuperVOOC 2.0 Flash Charge</li>
+                </ul>
+                <a
+                    href="https://www.amazon.co.uk/OPPO-Find-X2-Pro-Snapdragon/dp/B08963XYV4/ref=sr_1_1?crid=1EB3DJDRN7F4Y&dchild=1&keywords=oppo+find+x2+pro&qid=1609540670&quartzVehicle=16-2083&replacementKeywords=oppo+find+pro&sprefix=oppo%2Caps%2C172&sr=8-1">£789.00
+                </a>
+            </div>
+            <div class="col-sm">
+                <img src="./onePlus.png" class="img-fluid img" alt="">
+                <h4>OnePlus 8 Pro</h4>
+                <ul>
+                    <li>120 Hz Fluid Display</li>
+                    <li>Qualcomm® Snapdragon™ 865 and 5G</li>
+                    <li>Warp Charge30 Wireless</li>
+                    <li>48 MP Quad Camera</li>
+                </ul>
+                <a
+                    href="https://www.amazon.co.uk/OnePlus-SIM-Free-Smartphone-Triple-Glacial/dp/B07XYK31SQ/ref=sr_1_1?crid=2GVVBDBIW9DC5&dchild=1&keywords=oneplus+8+pro&qid=1609540354&sprefix=oneplus+%2Caps%2C340&sr=8-1">
+                    £798.99</a>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="comment">
+                <label for="Comment">Give Us Feedback:</label>
+                <input type="text" id="commentbox" />
+                <input type="button" id="submitbutton" value="Submit" onclick="consoleSubmit()" />
+            </div>
+        </div>
+        <div>
+            <h2 id="listTitle">Todo List</h2>
+            <ul id="firstList">
+                <li>
+                    <p>1st</p>
+                </li>
+                <li>2nd</li>
+                <li>3rd</li>
+            </ul>
+            <ul id="secondList">
+                <li>1st</li>
+                <li>2nd</li>
+                <li>3rd</li>
+            </ul>
+        </div>
+
+        <div>
+            <p>This text is just for the exercise</p>
+        </div>
+        <footer class="row justify-content-center mt-3">
+
+            <h3 class="mt-4 mr-2">Find Us</h3>
+            <div class="addressChange mr-2" onclick="changeAddress()">
+                <p>Phone Shop,
+                    <br>
+                    White Rose Shopping Centre,
+                    <br>
+                    Dewsbury Rd,
+                    <br>
+                    Leeds
+                    LS11 8LU
+                </p>
+                <br>
+            </div>
+
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9434.937866375036!2d-1.5741667!3d53.7586111!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb2ce56bf14f9663!2sWhite%20Rose%20Shopping%20Centre!5e0!3m2!1sen!2suk!4v1609543945773!5m2!1sen!2suk"
+                width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+        const changeHeading = () => {
+            let heading = document.querySelector("h1");
+            heading.innerText = "ITS PAAARTY T I M E!"
+        }
+
+        const changeBackground = () => {
+            let background = document.querySelector("body")
+            background.style.backgroundColor = "#E9C46A";
+        }
+
+        const changeAddress = () => {
+            let address = document.querySelector("p")
+            address.innerText = "Phone Shop, Windsor Castle, SL4 1NJ "
+        }
+    </script>
+    <script>
+        /*EXERCISE 1 
+           Create a new welcome alert message when the page successfully loads
+          */
+
+
+        window.onload = function () {
+            alert("Welcome!")
+        };
+
+        /* EXERCISE 2
+            Write a function to change the Title of the page in something else (execute the function in browser console)
+        */
+        const changeTitle = function () {
+            let title = document.querySelector("h1");
+            title.innerText = "ITS PAAARTY T I M E!"
+        };
+        /* EXERCISE 3a
+            Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
+        */
+        const addClassToTitle = function () {
+            let titleToCh = document.querySelector("h1")
+            let addClass = titleToCh.setAttribute('class', "red-color")
+
+        };
+        /* EXERCISE 3b
+            Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
+        */
+        const removeClassFromTitle = function () { };
+        let remove = document.querySelector("h1")
+        let lastClass = remove.getAttributeNode('class')
+        lastClass.removeAttributeNode(Attr)
+
+        /* EXERCISE 4
+            Add the following html snippet to your page:
+                <h2 id="listTitle">Todo List</h2>
+                <ul id="firstList">
+                    <li><p>1st</p></li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                </ul>
+                <ul id="secondList">
+                    <li>1st</li>
+                    <li>2nd</li>
+                    <li>3rd</li>
+                </ul>
+                <div>
+                    <p>This text is just for the exercise</p>
+                </div>
+        Write a function to change the text of only the p which are child of a div (execute the function by assigning it to a button's click event)
+        */
+        const changePContent = function () { };
+        /* EXERCISE 5
+            Write a function to change the list title (you can use previous day's textarea as input or create a new text input field to grab the content)
+        */
+        const changeListTitle = function (content) { };
+        /* EXERCISE 6
+             Write a function to add a new item ONLY to the second list (create an input field + add button)
+        */
+        const addToTheSecond = function (content) { };
+        /* EXERCISE 7
+            Write a function to make the first UL disappear (button)
+        */
+        const firstUlDisappear = function () { };
+        /* EXERCISE 8
+            Write a function to make the background of every UL green (button)
+        */
+        const paintItGreen = function () { };
+
+        /* EXERCISE 9
+            Add a "magnifier function" to the table.
+            When the user mouse goes on a table cell (not the image one) the font size must increase.
+            HINT use mouseenter / mouseleave events
+        */
+        const makeThemMagnifiable = function () { };
+        /* EXERCISE 10
+            Add a button to toggle all the product images (toggle => if visible, hide, if not visible, show)
+        */
+        const toggleShowImages = function () { };
+
+        //##### EXTRA
+
+        /* EXERCISE 11
+            Make the heading of the page change color radomly every time the user clicks on it
+            */
+        const makeItClickable = function () { };
+
+        /*EXERCISE 12
+          Refactor your HTML code with HTML5 semantic tags such as header, section, footer, etc
+      */
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
